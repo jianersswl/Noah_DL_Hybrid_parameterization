@@ -4,6 +4,7 @@ Optimizing Thermal and Hydrological Processing Simulation on the Qinghai-Tibet P
 ## Outline
 
 1. [Project Structure](#project-structure)
+2. [Dataset Model](#dataset-model)
 
 ## Project Structure
 
@@ -60,6 +61,16 @@ project-root/
     - **SURROGATE_TRAINING_UWC_WANDB.ipynb**: a training sample using wandb to train the surrogate tested by UWC
     - **SURROGATE**: save the well-trained model in this directory.
     - **TEMP**: the datatset of input and ground truth in this directory.
+
+## Dataset Model
+For parameter generator
+- Input data: static propertise and vegetation coverage in 2015
+- ground truth: SMCI dataset in 2015 with resolution of 10 km
+- input for surrogate: CMFD dataset in 2015 with resolution of 0.1 degree
+
+For surrogate
+- Input data: CMFD dataset during 2010 and 2014 with resolution of 0.1 degree
+- ground truth: simulation of Noah feeding CMFD during 2010 and 2014 with resolution of 0.1 degree
 
 
 
